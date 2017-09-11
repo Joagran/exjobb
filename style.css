@@ -1,0 +1,234 @@
+* {
+  /* border: 1px solid black; */
+}
+
+body {
+  background: #e2e1e0;
+  text-align: center;
+}
+
+.box {
+  background: #fff;
+  border-radius: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  height: 400px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.box img{
+  width: 75%;
+  height: 75%;
+}
+
+.searchArea {
+  padding-top: 1em;
+  width: 50%;
+  margin: auto;
+}
+
+.searchArea div {
+  vertical-align: middle;
+}
+
+.conditions {
+  width: 100%;
+  display: block;
+  /* margin: auto; */
+  padding-top: 3em;
+  /*border: 1px solid black; */
+}
+
+.conditions ul {
+  /* border: 1px solid black; */
+  text-align: left;
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
+  width: 100%;
+  padding-left: 2em;
+
+}
+
+#searchForm {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  margin-bottom: 1em;
+}
+
+.box:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#result {
+  display: none; /* app.js will change this once a search has been done */
+  width: 45%;
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+
+}
+
+#addedTasks {
+  display: none;
+  width: 100%;
+  margin-top: 3.5em;
+  margin-left: 0;
+  padding-top: 1em;
+}
+
+#scheduleForm, #scheduleFormWithoutWeather {
+  clear: both;
+  display: none;
+  height: 100px;
+  width: 100%;
+  margin: auto;
+}
+
+#scheduleForm p {
+  padding-top: 1em;
+  padding-bottom: 0.3em;
+}
+
+#scheduleTrack, #trackTitle, #scheduleTrackWithoutWeather, #trackTitleWithoutWeather {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+/* Global CSS, you probably don't need that */
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+.container {
+	font-family: 'Lato', sans-serif;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.wrapper {
+
+  margin: 0 auto;
+  /*width: 100%;*/
+	/*display: table-cell;*/
+	vertical-align: middle;
+}
+
+.nav {
+	margin-top: 40px;
+}
+
+.pull-right {
+	float: center;
+}
+
+a, a:active {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #999;
+}
+
+/* Breadcrups CSS */
+
+.arrow-steps .step {
+	font-size: 14px;
+	text-align: center;
+	color: #666;
+	cursor: default;
+	margin: 0 3px;
+	padding: 10px 10px 10px 30px;
+	width: 28.5%;
+	float: left;
+	position: relative;
+	background-color: #d9e3f7;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: -17px;
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 17px solid #d9e3f7;
+	z-index: 2;
+  transition: border-color 0.2s ease;
+}
+
+.arrow-steps .step:before {
+	right: auto;
+	left: 0;
+	border-left: 17px solid #fff;
+	z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+	border: none;
+}
+
+.arrow-steps .step:first-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.arrow-steps .step span {
+	position: relative;
+}
+
+.arrow-steps .step span:before {
+	opacity: 0;
+	content: "✔";
+	position: absolute;
+	top: -2px;
+	left: -20px;
+}
+
+.arrow-steps .step.done span:before {
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease 0.5s;
+	-moz-transition: opacity 0.3s ease 0.5s;
+	-ms-transition: opacity 0.3s ease 0.5s;
+	transition: opacity 0.3s ease 0.5s;
+}
+
+.arrow-steps .step.current {
+	color: #fff;
+	background-color: #23468c;
+}
+
+.arrow-steps .step.current:after {
+	border-left: 17px solid #23468c;
+}

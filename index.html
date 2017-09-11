@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My web page</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div class="containerold">
+
+  <div class="container">
+<div class="wrapper">
+<div class="arrow-steps clearfix">
+        <div class="step current"> <span> Search for a song</span> </div>
+        <div class="step"> <span>Schedule playback</span> </div>
+        <div class="step"> <span>Done!</span> </div>
+
+
+    </div>
+
+</div>
+</div>
+
+    <div class="searchArea">
+
+      <div class="box" id="searchForm">
+        <form id="searchForm">
+          <h1>Search for a song</h1>
+          <input type="text" name="search" required title="The field is empty. Please fill it with a track name." id="search" placeholder="Search by title"/><br>
+
+          <div class="conditions">
+            <h2>Add conditions</h2>
+            <ul>
+              <li>
+                <input type="radio" name="searchtype" value="dateTime" checked> Schedule by date and time
+              </li>
+              <li>
+                <input type="radio" name="searchtype" value="dateTimeWeather"> Schedule by date, time and weather
+              </li>
+            </ul>
+        </div>
+          <input type="submit" value="Search" id="button">
+        </form>
+      </div>
+
+      <div class="box" id="result">
+        <ul>
+          <li id="artist"><li>
+          <li id="title"><li>
+          <li id="album"><li>
+        </ul>
+        <img id="image" src="" />
+      </div>
+
+      <div class="box" id="scheduleForm">
+        <form id="schedulePlaybackForm">
+          <p>
+            Play <span id="scheduleTrack"></span> at
+            <input type="datetime-local" name="timeSelector" id="timeSelector" required title = "Please fill in valid date, time and type of weather">
+            if it
+            <select name="weather" required>
+              <option>Select weather</option>
+              <option value="Clouds">is cloudy</option>
+              <option value="Clear">is clear</option>
+              <option value="Snow">snows</option>
+              <option value="Rain">rains</option>
+              <option value="Thunderstorm">is a thunderstorm</option>
+            </select>
+          </p>
+          <input type="submit" value="Schedule playback" id="button">
+        </form>
+      </div>
+
+      <div class="box" id="scheduleFormWithoutWeather">
+        <form id="schedulePlaybackWithoutWeatherForm">
+          <p>
+            Play <span id="scheduleTrackWithoutWeather"></span> at
+            <input type="datetime-local" name="timeSelector" id="timeSelector" required title = "Please fill in valid date and time">
+          </p>
+          <input type="submit" value="Schedule playback" id="button">
+        </form>
+      </div>
+
+      <div class="box" id="addedTasks">
+        <h1>Added tasks</h1>
+      </div>
+    </div>
+
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="app.js"></script>
+
+
+</html>
